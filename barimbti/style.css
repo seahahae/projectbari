@@ -1,0 +1,148 @@
+body {
+    background-color: #e5dad0;
+    color: #231709;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+
+#img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img2 {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.progress-bar {
+    background-color: #2d593d;
+}
+.progress {
+    background-color: #aca792;
+}
+
+.main-title {
+    font-size: 14px;
+    color: #c09984;
+}
+.sub-title {
+    font-size: 24px;
+    font-weight: 100;
+    color: #524f4a;
+}
+
+.btn-start {
+    font-size: 16px;
+    width: 288px;
+    margin: 0 auto;
+    color:#ffffff;
+    background-color: #2d593d;
+}
+
+.btn-start, .btn-start:visited, .btn-start:hover, .btn-start:active {
+    font-size: 16px;
+    color:#ffffff;
+    background-color: #2d593d;
+    border:#2d593d;
+}
+.btn-start:active,.btn-start:focus {
+    background-color: #2d593d !important;
+    border:#2d593d !important;
+    font-size: 16px;
+    color:#ffffff;
+}
+
+.question-content {
+    font-size: 14px;
+}
+
+.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+    background-color: #2d593d;
+    border:#2d593d;
+    width: 288px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+}
+.btn-answer:hover {
+    background-color: #52474a !important;
+    border: #52474a!important;
+    width: 288px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.result-con {
+    font-size: 18px;
+    font-weight: 100;
+    color: #104b37;
+}
+.result-expn {
+    font-size: 13px;
+    font-weight: normal;
+    color: #746f71;
+}
+
+.copyright-text {
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    color: #7c7c7c;
+}
+
+.share{
+    margin:0 auto;
+}
+
+.kakao-ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#banner-img{
+    width: 320px;
+}
+
+.ebanner {
+    width: 320px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#ebanner-img{
+    width: 320px;
+}
+
+.appx{
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 13px;
+    color: #74a059;
+}

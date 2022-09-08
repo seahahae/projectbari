@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <article class="start">
+        <h1 class="main-title mt-5 text-center">바리 유형 테스트</h1>
+        <h2 class="sub-title mt-3 text-center">나는 어떤 유형의 바리일까?</h1>
+        <img id="img" class="rounded-circle mt-5" src="images/바리 시작.png" alt="">
+        <button type="button" class="btn-start btn btn-success mt-5" onclick="start();">모험 시작하기!</button>
+    </article> 
+
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h2 id='title' class="question-content text-center mt-5 mb-5">문제</h2>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn-answer btn btn-light mt-5">Light</button>
+        <button id="B" type="button" class="btn-answer btn btn-light mt-5">Light</button>
+    </article>
+
+    <article class="result">
+        <h1 class="main-title mt-5 text-center">바리 유형 테스트</h1>
+        <h2 class="sub-title mt-3 text-center">나는 어떤 유형의 바리일까?</h1>
+        <img id="img2" class="rounded-circle mt-5" src="images/바리 시작.png" alt="con">
+        <h2 id="con" class="result-con text-center mt-5">동물이름</h2>
+        <h3 id="expn" class="result-expn text-center mt-5">설명</h3>
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
+    </article>
+
+    <article class="logo">
+        <span class="mt-2 text-center copyright-text">Copyright 2022. seahahae. All rights reserved</span>
+    </article>
+
+    <div class="appx">
+        <a href="https://www.instagram.com/you1dog_official/">바리별 유형이 궁금하다면? 여기를 클릭하세요!</a>
+    </div>
+
+    <a class="mt-4 ebanner" href="https://bio.site/enactus__dgu?utm_source=bari_test&utm_medium=banner2&utm_campaign=you1dog">
+        <img class="ebanner-img" id="ebanner" src="images/인액 배너.png" alt="인액터스">
+    </a>
+
+    <a class="mt-2 banner" href="https://link.tumblbug.com/GMlA4LahZsb?utm_source=bari_test&utm_medium=banner&utm_campaign=you1dog">
+        <img class="banner-img" id="banner" src="images/율견배너.png" alt="banner">
+    </a> 
+    <article class="kakao-ad mt-2">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-wBkJjHjmUzpmVKYt" 
+        data-ad-width   = "320" 
+        data-ad-height  = "50"></ins>
+    </article>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
+    <script>
+        var num=1;
+        var q={
+            1:{"title":"눈을 뜨니 집이 아닌 낯선 광경이다. 주위를 둘러봐도 모든 것이 초면이다. 이때 나는", "type":"SN", "A":"'이게 무슨...' 충격으로 인해 머리가 백지처럼 새하얘진다.", "B":"'이게 대체 무슨 일이지? 여긴 어디야??' 머릿속이 물음표로 가득 찬다."},
+            2:{"title":"고개를 돌리니 옆에 놓인 빨간 보따리가 보인다. 풀어헤쳐 보니 나온 것은 쪽지 한 장. 이름, 나이, 그리고 단 한 문장만이 적혀있다.<br><strong>'나를 찾기 위한 여정을 시작해요.'</strong>", "type":"JP", "A":"침착하자. 우선 내가 할 수 있는 것을 해야 해. 지금까지의 상황과 앞으로를 정리해본다.", "B":"더 많은 정보가 필요해! 추가적인 정보를 얻기 위해 주위를 둘러본다."},
+            3:{"title":"이때 머릿속을 지나가는 몇몇 목소리. <br>'말과 다르잖아.' '못났어' '...당장 내다버려!' 아, 나는 버려졌구나... 이때 나는","type":"SN", "A":"휘둘리면 지체만 될 뿐이야. 잡념을 떨치고 발걸음을 재촉한다.", "B":"'왜? 이게 한 생명을 버릴만한 이유가 되나? 그게 전부인가?' 생각이 꼬리를 문다."},
+            4:{"title":"이렇게 된 이상, 모험을 떠나긴 해야겠다! 근데, 어디로 가지?", "type":"JP", "A":"아예 모르는 곳은 좀... 모르니까 더 합리적이어야 해. 인근 마을로 향하는 왼쪽 길", "B":"본능이 날 필요한 곳으로 안내해줄 거야. 자고로 여행은 즉흥이지! 신비스러운 분위기의 오른쪽 길"},
+            5:{"title":"길에서 서럽게 우는 한 아이와 마주쳤다. '내가 너무 커버렸대. 이제 안 귀엽고 가족도 아니래.' 이때 내가 보일 반응은", "type":"EI", "A":"'우리는 누구나 자라! 그런 못된 사람들은 네 가족이 될 자격이 없어.' 일부러 크게 리액션을 하며 적극적으로 위로한다.", "B":"'우선 진정하고... 지금은 좀 어때? 너가 괜찮아질 때까지 여기 있을게.' 조용히 옆에 앉아 기다려준다."},
+            6:{"title":"'무서워. 너무 슬퍼. ...가족이 다시 보고 싶어.' 울음을 그친 아이가 중얼거린다. 마음 아프지만, 돌아가는 게 옳은 선택일까? 이때 내가 할 말은", "type":"TF", "A":"너를 멋대로 버리는 인간은 진짜 가족이 아냐. 너를 진심으로 아끼는 이들을 만나야 해.", "B":"나였어도 화가 나고 슬프지만 그래도 보고 싶었을 거 같아. 그래도 돌아가는 건 좋은 선택이 아냐."},
+            7:{"title":"아이와 함께 움직이기로 했다. 길을 나아가는데 시무룩한 얼굴의 친구가 보인다. '너무 제멋대로라고 쫓겨났어. 갈 곳이 없는데...어떡하지?'", "type":"JP", "A":"`우선 먹을거리는 여기서 해결하고, 그다음에는 ...` 함께 계획을 짜며 머리를 맞대고 궁리한다.", "B":"뭘 좀 알아야 감이 잡힐 텐데! 우선 아는 정보를 최대한 취합하고, 주변을 관찰한다."},
+            8:{"title":"친구도 여정에 함께하기로 했다. 이때 눈 앞에 펼쳐진 냇가. 건너려는데 옆에서 안절부절못하는 몸이 불편한 노인과 눈이 마주쳤다.", "type":"SN", "A":"'저기요, 혹시 도움이 필요하신가요?' 곧바로 여쭤본다.", "B":"혹시 도움이 필요하신가? 여쭤보면 기분 나빠하시려나? 내가 너무 오버하나? 망설이다가 말을 건넨다."},
+            9:{"title":"'집으로 돌아가려면 여기를 건너야 하는데.. 내가 거동이 불편해서... 혹시 도와줄 수 있나요?' 다들 힘을 합쳐 무사히 건넜다. <br>하지만 건넌 후 뒤돌아보니 침울해진 일행이 눈에 들어온다. 이때 나는",  "type":"EI", "A":"분위기를 띄워야 해! 일부러 밝은 표정으로 농담해 모두를 웃게 한다.", "B":"다들 힘들만 하지,... 잠시 쉬었다 가자고 제안한 후, 자리에 앉아 조용히 지켜본다."},
+            10:{"title":"그런데 이상하다. 냇물 건너는 것조차 힘들다면, 애초에 그곳에는 어떻게 온 거지? 이런 생각을 알아챈 듯, 노인이 이내 어색하게 말한다. <br>'가족과 함께 왔는데 그만 놓쳐버렸어. 내 목소리를 못 들었나 봐. 날 기다릴 텐데...' 이때 내 반응은,", "type":"TF", "A":"그 사람들은 상태를 알면서도 아직도 다시 오지 않았어요. 그건 정말 무책임하고 잘못된 행동이에요.", "B":"속상하셨겠어요. 저였어도 안 믿겼을 거예요..."},
+            11:{"title":"이 세상에 나 하나인 줄 알았는데, 허무하게 버림받은 나 같은 친구가 너무 많다... 지금 나는", "type":"TF", "A":"무언가 단단히 잘못된 이 상황을 바로잡을 해결책을 고안하고 싶다.", "B":"잘못 없는 친구들이 왜 이런 일이 겪어야 하는지 분하고 억울하다."},
+            12:{"title":"친구들이 가족과 평생 함께할 수 있도록 돕고 싶어! 하지만 어떻게?", "type":"EI", "A":"계속해서 모험한다. 또 다른 친구들을 만나고, 그들의 이야기를 듣는다. ", "B":"우리의 이야기를 글로 남기고, 도움을 요청하러 온 친구들을 돕는다."}
+        }
+        var result={
+            "INTJ": {"con":"내 앞길에 패배란 없다! 지략의 달인 <strong>전술가</strong> 바리", "expn":"당신은 이성적으로 사고하며, 지식에 언제나 목말라 하는 학구적인 사람입니다. 자유롭게 상상에는 끝이 없으며, 그것을 이뤄낼 분명한 추진력과 결단력을 가지고 있죠. 고고히 나아가는 당신에게서는 마치 백조처럼 신비로운 분위기가 흐릅니다. 사람들에게 좀 더 부드러워지세요. 사람들은 때로는 칼같은 조언보다 따뜻한 온정을 더 필요로 한답니다.", "img": "intj.png"},
+            "INTP": {"con":"금, 아니 아이디어 나와라 뚝딱! <strong>화수분</strong> 바리", "expn":"당신의 창의적인 아이디어는 마치 샘처럼 솟아나와요. 무한한 호기심을 가진 당신은 가끔씩 모두를 놀래킬 독창적인  아이디어를 제시하고는 해요. 한 번 꽂힌 주제에 무섭도록 몰입해 깊이 탐구하는 학구적인 태도를 가졌습니다.<p>무엇이든, 우선 실행에 옮기세요! 머리 속에 갇혀 있는 여러 아이디어를 직접 실천하면 변화가 일어날 것입니다.", "img": "intp.png"},
+            "ENTJ": {"con":"이보다 더 든든할 수 없는 캡틴, 오 마이 캡틴! <strong>대장</strong> 바리", "expn":"당신은 많은 사람의 든든한 버팀목입니다. 열정적인 태도로 거침없이 추진하는 당신의 면모에 많은 이가 저절로 믿고 따르죠. 표를 이뤄내는 데 당신이 두려워하는 것은 없습니다. 감정을 솔직하게 표현하는 데 주저하지 마세요. 있는 그대로의 당신을 표현하는 것은 의외로 모든 일을 더 수월하게 만들어준답니다.", "img": "entj.png"},
+            "ENTP": {"con":"내일 지구의 종말이 오더라도 난 오늘도 질문을 던지겠다! <strong>논객</strong> 바리", "expn":"당신은 세상에 계속해서 질문을 던지는 사람입니다. 남들과 다르게 생각하는 것을 두려워하지 않는 혁신적인 사람이죠. 무궁무진한 당신의 아이디어는 세상을 변화시킬 가능성이 포진해 있습니다. 당신의 아이디어를 세상에 표출하세요! 선물상자 리본을 풀기 전까지, 우리는 그 안에 무엇이 들었는지 모르니까요.", "img": "entp.png"},
+            "INFJ": {"con":"따사로운 햇볕으로 모두를 따스히 감쌀 거에요, <strong>햇살</strong> 바리", "expn":"당신은 각박한 세상 속 한 줄기 빛같은 사람입니다. 진실된 태도로 나누는 대화는 스스로에게 뿐만 아니라 많은 이에게 기쁨을 준답니다. 또한 올곧은 당신의 가치관과 원칙은 세상을 한결 나은 곳으로 만들어줘요. 있는 그대로의 당신을 조금 더 드러내 보세요. 당신이 그러는 것처럼, 당신을 사랑하는 사람들도 당신을 알고 돕고 싶어한답니다.", "img": "infj.png"},
+            "INFP": {"con":"시원한 그늘 아래 꽃향기 속에서 우리 함께 거닐어요, <strong>꽃그늘</strong> 바리", "expn":"당신이 내딛는 자리는 언제나 꽃이 피어요.당신은 언제나 친절한 태도로 사람들을 대하며, 상대에게 진심으로 공감하며 경청하죠.따뜻하면서도 독창적인 당신의 세계는 모래 사막 속 오아시스와도 같은 존재랍니다.언제나 당신이 서있는 곳을 잊지 마세요!상황을 정확히 인지하고 당신의 목표까지 한 걸음 한 걸음 나아가세요.", "img": "infp.png"},
+            "ENFJ": {"con":"찬란한 빛으로 만물을 소중히 아울러요, <strong>태양</strong> 바리", "expn":"당신은 일몰 이후에도 여전히 만물을 금빛으로 물들이는 해와 같은 사람입니다.정도를 향해 앞서 나아가는 당신을 보고 다른 사람들은 뒤를 따르죠.특히 약자를 위하고 행동하는 당신의 존재는 이 세상이 한결 더 나아지도록 합니다.균형을 유지하세요.남을 돕기 위해선, 우선 내가 이 세상에 분명히 두 발을 내딛고 있어야 한다는 걸 잊지 마세요.", "img": "enfj.png"},
+            "ENFP": {"con":"밝은 에너지를 이 세상에 널리 퍼뜨려요, <strong>비타민</strong> 바리", "expn":"당신은 긍정적인 에너지를 퍼뜨리는 이 세상의 비타민과 같은 존재입니다!당신의 밝고 쾌활한 태도는 많은 이에게 즐거움을 선물하며, 당신의 세계엔 웃음소리가 가득차있어요.또한 색다른 방식으로 삶을 진심으로 즐길 줄 아는, 진정한 멋쟁이죠.눈 앞의 목표에 집중하세요.체계적으로 하나씩 이뤄나가다 보면 삶이 한층 더 다채로워 질 거에요.", "img": "enfp.png"},
+            "ISTJ": {"con":"꼿꼿한 자세로 굳건히 자리를 지켜요, <strong>수호자</strong> 바리", "expn":"당신은 이 세상의 질서와 평화를 지키는 사람입니다.굳건한 태도로 윤리와 질서를 지키고자 언제나 노력하는 사람이죠.또한 헌신적인 태도로 책임을 다하는 당신에게서 사랑하는 사람들은 늘 안정과 위안을 얻습니다.의사를 분명히 표현하세요.가끔씩 선을 분명히 긋는 것은 스스로에게 뿐만 아니라 다른 이를 위한 일이기도 한답니다.", "img": "istj.png"},
+            "ISFJ": {"con":"너의 행복이 곧 나의 행복이야! <strong>산소</strong> 바리", "expn":"당신은 이 세계에서 없어서는 안 될 산소 같은 존재에요.당신은 항상 세심하게 상대를 배려하며, 사려깊은 태도로 남의 말에 귀를 기울이죠.맡은 바에 열정적으로 임하며, 대인 관계도 원활한 당신은 겸손하기까지 해 많은 애정과 존경을 받습니다.인생의 1순위는 나 자신이라는 사실을 늘 상기하세요.내면에서 들리는 목소리에 귀기울이는 것은 중요해요.", "img": "isfj.png"},
+            "ESTJ": {"con":"이 세상에 즐거움과 아름다움을 더해요, <strong>무지개</strong> 바리", "expn":"당신은 이 세상을 한층 아름답게 해주는 무지개에요.질서를 철저히 지키며, 늘 솔선수범해 조화를 이뤄내고자 하죠.동시에 옛 것의 소중함을 기억하는 낭만적인 면모도 있습니다.서로 다른 색깔이 모여 무지개를 이루고 있다는 사실을 기억하세요.단색으로만 이루어진 무지개는 여전히 아름다울까요?", "img": "estj.png"},
+            "ESFJ": {"con":"그 누구도 아닌 나만의 방식으로 마음껏 세상을 그려 나가요! <strong>화가</strong> 바리", "expn":"이 세계가 흰 도화지라면, 당신을 그것을 하나하나 채워나가는 화가입니다.당신은 언제나 주변을 세심하게 관찰하고, 기꺼이 남을 위해 발벗고 나서고자 하죠.다른 사람을 친절하고 따뜻한 태도로 대하지만, 옳고 그름은 명확히 구분합니다.우리가 세심하게 주의를 기울여도, 모든 붓터치가 우리의 마음대로 되지는 않습니다.때때로는 의도하지 않은, '실수로 한' 붓터치 하나가 오히려 걸작을 만들어낼 수 있답니다.", "img": "esfj.png"},
+            "ISTP": {"con":"나만의 관점으로 숨어있던 형상을 이 세상에 소개해요, <strong>조각가</strong> 바리", "expn":"당신은 원석에서 숨겨진 형체를 발견하고 이를 발굴하는 조각가와 같은 사람입니다.당신은 독창적인 시선으로 세계를 바라보며, 직접 부딪혀서 배운 점을 남과 공유하는 것을 즐깁니다.당신의 자유로운 사고는 한계가 없으며, 늘 열림 마음과 태도로 상대를 대합니다.가끔씩은 멈춰서서 숨을 고르세요. 마냥 질주하다 보면 넘어지기도 쉽고 모르는 사이 잘못된 장소에 도달할 수 있으니까요.", "img": "istp.png"},
+            "ISFP": {"con":"자유롭게 유랑하며 이 세상의 이치를 읊어요, <strong>시인</strong> 바리", "expn":"당신은 이 세상을 벗 삼아 풍류를 즐기는 시인입니다.개방적인 태도 및 호기심 가득한 시선으로 세상을 바라보며, 이를 통해 참신한 시가 흘러나옵니다.동시에 지나간 시간에 얽매이지 않고 앞을 향해 계속해서 나아갑니다.스스로에 대해서 사색하는 순간이 필요합니다.가끔은 시선을 안으로 옮겨 내면의 목소리에 귀기울여 보세요.", "img": "isfp.png"},
+            "ESTP": {"con":"암흑 속에서 눈 부신 빛을 발해요, <strong>전구</strong> 바리", "expn":"당신은 어둠 속 전구와도 같은 존재입니다.당신은 눈앞의 현실 세계에 집중하며, 도전을 두려워하지 않고 시행착오를 겪으며 빠르게 성장하죠.또한 빛나는 당신은 언제나 주목받으며, 함께하는 사람들에게 밝은 에너지를 발산합니다.때때로 전구의 온도가 과열되지 않았는지, 너무 오랫동안 켜지지 않았는지 확인해주세요.전구는 적정 상황에서 가장 오랫동안 빛을 발할 수 있으니까요.", "img": "estp.png"},
+            "ESFP": {"con":"자유롭게, 있는 그대로의 나를 마음껏 이 세상에 드러내요! <strong>배우</strong> 바리", "expn":"이 세상은 연극 무대요, 모든 이는 무대 위 연기자라는 셰익스피어의 비유는 당신을 위한 말 아닐까요?당신은 인생이라는 작품 속 주인공으로서 주체적으로, 마음껏 이야기를 이끌어나가는 자유로운 영혼입니다.매 순간 순간을 진심으로 즐기며, 다른 사람에게도 깊이 공감하며 기꺼이 함께 나누고자 하죠.극을 구성할 때 쉬는 시간이 있다는 점을 기억하세요.잠깐이라도 스스로를 되돌아보고, 필요사항을 챙기는 것을 잊지 마세요!", "img": "esfp.png"}
+        }
+
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        $("#A").click(function(){
+            var type= $("#type").val();
+            var preValue= $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        $("#B").click(function(){
+            next()
+        });
+        function next() {
+            console.log("asdasdasd");
+            if(num==13) {
+                $(".question").hide();
+                $(".result").show();
+                var mbti= "";
+                ($("#EI").val() <2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() <2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() <2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() <2) ? mbti+="P" : mbti+="J";
+                $("#img2").attr("src", "images/"+result[mbti]["img"]);
+                $("#con").html(result[mbti]["con"]);
+                $("#expn").html(result[mbti]["expn"]);
+            } else {
+                $(".progress-bar").attr('style','width:calc(100/12*'+num+'%)');
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }           
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-630fac48fc1f3994"></script>
+</body>
+</html>
