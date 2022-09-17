@@ -128,15 +128,15 @@ article{
     width: 320px;
 }
 
-.ebanner {
+.eventbanner {
     width: 320px;
-    height: 60px;
+    height: 320px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
 
-#ebanner-img{
+#eventbanner-img{
     width: 320px;
 }
 
